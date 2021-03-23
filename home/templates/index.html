@@ -255,13 +255,13 @@
 									  <div class="middle">
 									    <div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
 									  </div>
-								</a>                              		
+								</a>
                             	</div>
 								<div class="p-inner">
 								    <h4>2D Vinyl Design</h4>
 									<div class="cat">vector</div>
-								</div>					                               
-                            </div>                            
+								</div>
+                            </div>
                             <div class="single-portfolio col-sm-4 all ui">
                             	<div class="relative">
 	                            	<div class="thumb">
@@ -272,8 +272,8 @@
 									  <div class="middle">
 									    <div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
 									  </div>
-									</a> 
-	                            		
+									</a>
+
 	                           	</div>
                                 <div class="p-inner">
                                     <h4>Creative Poster Design</h4>
@@ -290,8 +290,8 @@
 									  <div class="middle">
 									    <div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
 									  </div>
-									</a>                            		
-                            	</div> 
+									</a>
+                            	</div>
                                 <div class="p-inner">
                                     <h4>Embosed Logo Design</h4>
                                     <div class="cat">Portal</div>
@@ -307,7 +307,7 @@
 									  <div class="middle">
 									    <div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
 									  </div>
-									</a>                             		
+									</a>
                             	</div>
                                 <div class="p-inner">
                                     <h4>3D Helmet Design</h4>
@@ -324,7 +324,7 @@
 									  <div class="middle">
 									    <div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
 									  </div>
-									</a>                             		
+									</a>
                             	</div>
                                 <div class="p-inner">
                                     <h4>2D Vinyl Design</h4>
@@ -350,31 +350,21 @@
 		                </div>
 		            </div>
 		            <div class="row">
-		                <div class="active-testimonial">
+		               <div class="active-testimonial">
+							{% for feedback in feedbacks %}
 		                    <div class="single-testimonial item d-flex flex-row">
 		                        <div class="thumb">
-		                            <img class="img-fluid" src="img/elements/user1.png" alt="">
+		                            <img class="img-fluid" src= "{{feedback.image}}"  height="70" width= "70" alt="">
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.		     
+		                             {{feedback.comment}}
 		                            </p>
-		                            <h4>Harriet Maxwell</h4>
-		                            <p>CEO at Google</p>
+		                            <h4>{{feedback.name}}</h4>
+		                            <p>{{feedback.post}}</p>
 		                        </div>
 		                    </div>
-		                    <div class="single-testimonial item d-flex flex-row">
-		                        <div class="thumb">
-		                            <img class="img-fluid" src="img/elements/user2.png" alt="">
-		                        </div>
-		                        <div class="desc">
-		                            <p>
-		                                A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
-		                            </p>
-		                            <h4>Carolyn Craig</h4>
-		                            <p>CEO at Facebook</p>
-		                        </div>
-		                    </div>
+							{% endfor %}
 		                </div>
 		            </div>
 		        </div>

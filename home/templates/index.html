@@ -218,11 +218,13 @@
                     
                     <div class="filters">
                         <ul>
-                            <li class="active" data-filter="*">All</li>
-                            <li data-filter=".vector">Vector</li>
-                            <li data-filter=".raster">Raster</li>
-                            <li data-filter=".ui">UI/UX</li>
-                            <li data-filter=".printing">Printing</li>
+                            <li class="active" data-filter="">All</li>
+							<li  data-filter="vector">vector</li>
+							<li  data-filter="raster">raster</li>
+							<li  data-filter="ui">ui</li>
+							<li  data-filter="printing">printing</li>
+
+
                         </ul>
                     </div>
                     
@@ -553,22 +555,12 @@
 		        <div class="container">
 		            <div class="brand-wrap">
 		                <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
+							{% for brand in brands %}
 		                    <div class="col single-brand">
 		                        <a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
 		                    </div>
-		                    <div class="col single-brand">
-		                        <a href="#"><img class="mx-auto" src="img/l2.png" alt=""></a>
-		                    </div>
-		                    <div class="col single-brand">
-		                        <a href="#"><img class="mx-auto" src="img/l3.png" alt=""></a>
-		                    </div>
-		                    <div class="col single-brand">
-		                        <a href="#"><img class="mx-auto" src="img/l4.png" alt=""></a>
-		                    </div>
-		                    <div class="col single-brand">
-		                        <a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
-		                    </div>
-		                </div>
+					   </div>
+						{% endfor %}
 		            </div>
 		        </div>
 		    </section>

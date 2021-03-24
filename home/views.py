@@ -6,8 +6,9 @@ from django.shortcuts import render
 def home(request):
     views = {}
     views['feedbacks'] = Review.objects.all()
-    views = {}
     views["projects"] = Project.objects.all()
+    views["brands"] = Brand.objects.all()
+
 
 
     return render(request, 'index.html', views)
@@ -48,4 +49,8 @@ def contact(request):
             message=message
         )
         data.save()
+        views = {}
+        views["message"] = "the form is submitted"
+        return render(request, 'contact.html', views)
+
     return render(request, 'contact.html')
